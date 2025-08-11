@@ -1,0 +1,131 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // 1. Optional parameters
+    
+        Greet();
+        Greet("Alice");
+
+        // 2. Named parameters
+   
+        ShowPerson(lastName: "Doe", firstName: "John");
+
+        // 3. Params
+  
+        SumNumbers(1, 2, 3, 4, 5);
+
+        // 4. Ref
+        int myNum = 5;
+        Console.WriteLine($"Before: {myNum}");
+        DoubleValue(ref myNum);
+        Console.WriteLine($"After: {myNum}");
+
+        // 5. Out
+      
+        if (TryParseAge("25", out int myAge))
+        {
+            Console.WriteLine($"Parsed age: {myAge}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid age format");
+        }
+    }
+
+    // 1. Optional parameters
+    static void Greet(string name = "stranger")
+    {
+        Console.WriteLine($"Hello, {name}!");
+    }
+
+    // 2. Named parameters
+    static void ShowPerson(string firstName, string lastName)
+    {
+        Console.WriteLine($"{firstName} {lastName}");
+    }
+
+    // 3. Params
+    static void SumNumbers(params int[] numbers)
+    {
+        int sum = 0;
+        foreach (var n in numbers) sum += n;
+        Console.WriteLine($"Sum: {sum}");
+    }
+
+    // 4. Ref
+    static void DoubleValue(ref int number)
+    {
+        number *= 2;
+    }
+
+    // 5. Out
+    static bool TryParseAge(string input, out int age)
+    {
+        return int.TryParse(input, out age);
+    }
+}
+
+
+
+
+
+
+
+using System;
+
+// Parent class
+class Animal
+{
+    public string Name { get; set; }
+
+    public Animal(string name)
+    {
+        Name = name;
+    }
+
+    public void Eat()
+    {
+        Console.WriteLine($"{Name} is eating.");
+    }
+
+    public virtual void MakeSound()
+    {
+        Console.WriteLine($"{Name} makes a sound.");
+    }
+}
+
+// Child class inheriting from Animal
+class Dog : Animal
+{
+    public Dog(string name) : base(name) { }
+
+    public override void MakeSound()
+    {
+        Console.WriteLine($"{Name} says: Woof!");
+    }
+
+    public void WagTail()
+    {
+        Console.WriteLine($"{Name} is wagging its tail.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Animal genericAnimal = new Animal("SomeAnimal");
+        genericAnimal.Eat();
+        genericAnimal.MakeSound();
+
+        Console.WriteLine();
+
+        Dog dog = new Dog("Buddy");
+        dog.Eat();         // inherited from Animal
+        dog.MakeSound();   // overridden
+        dog.WagTail();     // Dog-specific
+    }
+}
