@@ -1,0 +1,140 @@
+--Multiple
+using System;
+
+// First interface
+interface IReadable
+{
+    void Read();
+}
+
+// Second interface
+interface IWritable
+{
+    void Write();
+}
+
+// Class implementing both interfaces
+class Document : IReadable, IWritable
+{
+    public void Read()
+    {
+        Console.WriteLine("Reading the document...");
+    }
+
+    public void Write()
+    {
+        Console.WriteLine("Writing to the document...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Document doc = new Document();
+        doc.Read();
+        doc.Write();
+    }
+}
+
+
+
+
+--Hierarchical Inheritance
+
+using System;
+
+class Vehicle
+{
+    public void Start()
+    {
+        Console.WriteLine("Vehicle started.");
+    }
+}
+
+class Car : Vehicle
+{
+    public void Drive()
+    {
+        Console.WriteLine("Car is driving.");
+    }
+}
+
+class Bike : Vehicle
+{
+    public void Ride()
+    {
+        Console.WriteLine("Bike is riding.");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Car myCar = new Car();
+        myCar.Start();
+        myCar.Drive();
+
+        Bike myBike = new Bike();
+        myBike.Start();
+        myBike.Ride();
+    }
+}
+
+
+--Encapsulation
+
+using System;
+
+class BankAccount
+{
+    private decimal balance;
+
+    public BankAccount(decimal initialBalance)
+    {
+        balance = initialBalance;
+    }
+
+    public void Deposit(decimal amount)
+    {
+        if (amount > 0)
+        {
+            balance += amount;
+            Console.WriteLine($"Deposited: {amount}. New Balance: {balance}");
+        }
+        else
+        {
+            Console.WriteLine("Deposit amount must be positive.");
+        }
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount > 0 && amount <= balance)
+        {
+            balance -= amount;
+            Console.WriteLine($"Withdrew: {amount}. New Balance: {balance}");
+        }
+        else
+        {
+            Console.WriteLine("Invalid withdrawal amount.");
+        }
+    }
+
+    public decimal GetBalance()
+    {
+        return balance;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        BankAccount account = new BankAccount(1000);
+        account.Deposit(500);
+        account.Withdraw(300);
+        Console.WriteLine($"Final Balance: {account.GetBalance()}");
+    }
+}
