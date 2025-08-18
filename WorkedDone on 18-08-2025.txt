@@ -1,0 +1,149 @@
+using System;
+
+namespace MethodOverridingDemo
+{
+    // Base class
+    class Animal
+    {
+        // Can be overridden in derived classes
+        public virtual void Speak()
+        {
+            Console.WriteLine("Animal makes a sound");
+        }
+
+        // Hidden in derived class using 'new'
+        public void Eat()
+        {
+            Console.WriteLine("Animal is eating");
+        }
+    }
+
+    // Derived class Dog overrides Speak
+    class Dog : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("Dog barks");
+        }
+
+        // Hides base Eat() using 'new'
+        public new void Eat()
+        {
+            Console.WriteLine("Dog is eating bones");
+        }
+    }
+
+    // Derived class Bulldog seals the override
+    class Bulldog : Dog
+    {
+        public sealed override void Speak()
+        {
+            Console.WriteLine("Bulldog growls");
+        }
+    }
+
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal a = new Animal();
+            a.Speak(); // Animal makes a sound
+            a.Eat();   // Animal is eating
+
+            Dog d = new Dog();
+            d.Speak(); // Dog barks
+            d.Eat();   // Dog is eating bones
+
+            Animal ad = new Dog();
+            ad.Speak(); // Dog barks (polymorphism)
+            ad.Eat();   // Animal is eating (new hides, not overrides)
+
+            Bulldog b = new Bulldog();
+            b.Speak(); // Bulldog growls
+            b.Eat();   // Dog is eating bones
+        }
+    }
+}
+
+
+
+//Access Modifier
+
+using System;
+
+namespace AccessModifiersDemo
+{
+    public class Animal
+    {
+        // Accessible everywhere
+        public string PublicName = "Public Animal";
+
+        // Accessible only inside this class
+        private string PrivateName = "Private Animal";
+
+        // Accessible in this class + derived classes
+        protected string ProtectedName = "Protected Animal";
+
+        // Accessible anywhere within the same assembly
+        internal string InternalName = "Internal Animal";
+
+        // Accessible in same assembly OR in derived classes (even if outside assembly)
+        protected internal string ProtectedInternalName = "Protected Internal Animal";
+
+        // Method to show private field (since it's only accessible inside class)
+        public void ShowPrivate()
+        {
+            Console.WriteLine("Inside Animal class: " + PrivateName);
+        }
+
+        // Virtual method for overriding example
+        public virtual void Speak()
+        {
+            Console.WriteLine("Animal makes a sound");
+        }
+    }
+
+    public class Dog : Animal
+    {
+        public override void Speak()
+        {
+            Console.WriteLine("Dog barks");
+
+            // Accessible: public, protected, internal, protected internal
+            Console.WriteLine(PublicName);
+            Console.WriteLine(ProtectedName);
+            Console.WriteLine(InternalName);
+            Console.WriteLine(ProtectedInternalName);
+
+            //  PrivateName is not accessible here
+            // Console.WriteLine(PrivateName);
+        }
+    }
+
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal a = new Animal();
+
+            // Accessible: public
+            Console.WriteLine(a.PublicName);
+
+            // Accessible: internal (since we’re in same assembly)
+            Console.WriteLine(a.InternalName);
+
+            // Accessible: protected internal (same assembly)
+            Console.WriteLine(a.ProtectedInternalName);
+
+            // Not accessible:
+            // Console.WriteLine(a.ProtectedName); 
+            // Console.WriteLine(a.PrivateName);   
+
+            a.ShowPrivate(); // Allowed (through public method)
+
+            Dog d = new Dog();
+            d.Speak();
+        }
+    }
+}
