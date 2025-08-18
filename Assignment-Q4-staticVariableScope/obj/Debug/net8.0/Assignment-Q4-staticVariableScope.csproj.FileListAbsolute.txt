@@ -1,0 +1,15 @@
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.AssemblyInfoInputs.cache
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.AssemblyInfo.cs
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.csproj.CoreCompileInputs.cache
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.sourcelink.json
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\bin\Debug\net8.0\Assignment-Q4-staticVariableScope.exe
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\bin\Debug\net8.0\Assignment-Q4-staticVariableScope.deps.json
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\bin\Debug\net8.0\Assignment-Q4-staticVariableScope.runtimeconfig.json
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\bin\Debug\net8.0\Assignment-Q4-staticVariableScope.dll
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\bin\Debug\net8.0\Assignment-Q4-staticVariableScope.pdb
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.dll
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\refint\Assignment-Q4-staticVariableScope.dll
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.pdb
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\Assignment-Q4-staticVariableScope.genruntimeconfig.cache
+C:\Users\Pavan Madapu\Desktop\C#-AssignmentQ&A\Assignment-Q4-staticVariableScope\obj\Debug\net8.0\ref\Assignment-Q4-staticVariableScope.dll
