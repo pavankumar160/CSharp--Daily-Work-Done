@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|c:\\users\\pavan madapu\\desktop\\c#-assignments\\assignment-q1stringsearch\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|c:\\users\\pavan madapu\\desktop\\c#-assignments\\assignment-q1stringsearch\\userinput_controlaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|solutionrelative:userinput_controlaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|c:\\users\\pavan madapu\\desktop\\c#-assignments\\assignment-q1stringsearch\\stringvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|solutionrelative:stringvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|c:\\users\\pavan madapu\\desktop\\c#-assignments\\assignment-q1stringsearch\\stringsearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD435591-5739-A8D5-5800-60768EB77EA3}|stringSearch.csproj|solutionrelative:stringsearcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "userInput_controlAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\userInput_controlAccess.cs",
+              "RelativeDocumentMoniker": "userInput_controlAccess.cs",
+              "ToolTip": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\userInput_controlAccess.cs",
+              "RelativeToolTip": "userInput_controlAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:14:05.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "stringValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\stringValidation.cs",
+              "RelativeDocumentMoniker": "stringValidation.cs",
+              "ToolTip": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\stringValidation.cs",
+              "RelativeToolTip": "stringValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T07:04:01.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StringSearcher.cs",
+              "DocumentMoniker": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\StringSearcher.cs",
+              "RelativeDocumentMoniker": "StringSearcher.cs",
+              "ToolTip": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\StringSearcher.cs",
+              "RelativeToolTip": "StringSearcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T16:06:35.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Pavan Madapu\\Desktop\\c#-Assignments\\Assignment-Q1stringSearch\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T08:57:22.31Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

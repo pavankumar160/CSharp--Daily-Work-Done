@@ -1,0 +1,14 @@
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\bin\Debug\net8.0\stringSearch.exe
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\bin\Debug\net8.0\stringSearch.deps.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\bin\Debug\net8.0\stringSearch.runtimeconfig.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\bin\Debug\net8.0\stringSearch.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\bin\Debug\net8.0\stringSearch.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.AssemblyInfoInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.AssemblyInfo.cs
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.csproj.CoreCompileInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\refint\stringSearch.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\stringSearch.genruntimeconfig.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q1stringSearch\obj\Debug\net8.0\ref\stringSearch.dll

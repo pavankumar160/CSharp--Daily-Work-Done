@@ -1,0 +1,14 @@
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\bin\Debug\net8.0\maxProductFinder.exe
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\bin\Debug\net8.0\maxProductFinder.deps.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\bin\Debug\net8.0\maxProductFinder.runtimeconfig.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\bin\Debug\net8.0\maxProductFinder.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\bin\Debug\net8.0\maxProductFinder.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.AssemblyInfoInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.AssemblyInfo.cs
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.csproj.CoreCompileInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\refint\maxProductFinder.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\maxProductFinder.genruntimeconfig.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q2-maxProductFinder\obj\Debug\net8.0\ref\maxProductFinder.dll

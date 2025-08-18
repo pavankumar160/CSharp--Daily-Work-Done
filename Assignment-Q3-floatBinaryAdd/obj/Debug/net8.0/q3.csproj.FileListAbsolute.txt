@@ -1,0 +1,14 @@
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\bin\Debug\net8.0\q3.exe
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\bin\Debug\net8.0\q3.deps.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\bin\Debug\net8.0\q3.runtimeconfig.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\bin\Debug\net8.0\q3.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\bin\Debug\net8.0\q3.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.AssemblyInfoInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.AssemblyInfo.cs
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.csproj.CoreCompileInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\refint\q3.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\q3.genruntimeconfig.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\q3\obj\Debug\net8.0\ref\q3.dll

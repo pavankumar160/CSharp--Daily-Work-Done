@@ -1,0 +1,14 @@
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.AssemblyInfoInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.AssemblyInfo.cs
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.csproj.CoreCompileInputs.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\bin\Debug\net8.0\floatBinaryAdd.exe
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\bin\Debug\net8.0\floatBinaryAdd.deps.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\bin\Debug\net8.0\floatBinaryAdd.runtimeconfig.json
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\bin\Debug\net8.0\floatBinaryAdd.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\bin\Debug\net8.0\floatBinaryAdd.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\refint\floatBinaryAdd.dll
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.pdb
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\floatBinaryAdd.genruntimeconfig.cache
+C:\Users\Pavan Madapu\Desktop\c#-Assignments\Assignment-Q3-floatBinaryAdd\obj\Debug\net8.0\ref\floatBinaryAdd.dll
