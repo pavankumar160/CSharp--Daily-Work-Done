@@ -1,0 +1,124 @@
+1]Interface:
+
+using System;
+
+interface IAnimal
+{
+    void Speak(); // method signature only
+}
+
+class Dog : IAnimal
+{
+    public void Speak()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IAnimal myDog = new Dog();
+        myDog.Speak();
+    }
+}
+
+
+
+
+
+2]Abstract Class:
+
+
+using System;
+
+abstract class Shape
+{
+    public abstract double Area();  // must be implemented
+    public void Display()
+    {
+        Console.WriteLine("This is a shape.");
+    }
+}
+
+class Circle : Shape
+{
+    private double radius;
+    public Circle(double r) { radius = r; }
+
+    public override double Area()
+    {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Shape circle = new Circle(5);
+        circle.Display();
+        Console.WriteLine("Area: " + circle.Area());
+    }
+}
+
+
+
+
+3]Partial Class:
+
+
+// File 1 or part 1
+public partial class Person
+{
+    public string FirstName { get; set; }
+}
+
+// File 2 or part 2
+public partial class Person
+{
+    public string LastName { get; set; }
+
+    public void Display()
+    {
+        Console.WriteLine($"{FirstName} {LastName}");
+    }
+}
+
+// Usage
+class Program
+{
+    static void Main()
+    {
+        Person p = new Person { FirstName = "John", LastName = "Doe" };
+        p.Display();
+    }
+}
+
+
+
+4]Extension Methods:
+
+using System;
+
+public static class StringExtensions
+{
+    public static string ReverseString(this string str)
+    {
+        char[] chars = str.ToCharArray();
+        Array.Reverse(chars);
+        return new string(chars);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        string word = "Hello";
+        Console.WriteLine(word.ReverseString()); // Output: olleH
+    }
+}
+
+
