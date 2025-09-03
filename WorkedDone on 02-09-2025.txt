@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Empty list
+        List<int> numbers = new List<int>();
+
+        // List with initial values
+        List<string> fruits = new List<string>() { "Apple", "Banana", "Mango" };
+
+        // Adding elements
+        numbers.Add(10);
+        numbers.Add(20);
+
+        //Checking the total allocated space
+        Console.WriteLine($"Total Element = {numbers.Count}");
+        Console.WriteLine($"Total allocated space = {numbers.Capacity}");
+
+        numbers.Add(30);
+        numbers.Add(40);
+
+        Console.WriteLine($"Total Element = {numbers.Count}");
+        Console.WriteLine($"Total allocated space = {numbers.Capacity}");
+
+        numbers.Add(50);
+
+        //Checking no of elements in the List
+
+        Console.WriteLine($"Total Element = {numbers.Count}");
+        Console.WriteLine($"Total allocated space = {numbers.Capacity}");
+
+
+        //Index based Insertion
+
+        numbers.Insert(2, 60);
+
+        //Remove first Occurence of the data
+
+        numbers.Remove(60);
+
+        //Index based deleteion
+
+        numbers.RemoveAt(2);
+
+
+        Console.WriteLine("Numbers in List:");
+        foreach (int num in numbers)
+        {
+            Console.WriteLine(num);
+        }
+
+        //Clear all the elements
+
+        numbers.Clear();
+    }
+}
+
+
+
+
+class Program
+{
+    static void Main()
+    {
+        Stack<int> stack = new Stack<int>();
+
+        // Push elements
+        stack.Push(10);
+        stack.Push(20);
+        stack.Push(30);
+
+        Console.WriteLine("Top element (Peek): " + stack.Peek());  // 30
+
+        // Pop element
+        Console.WriteLine("Popped element: " + stack.Pop());  // 30
+
+        Console.WriteLine("Top element after Pop: " + stack.Peek());  // 20
+
+        Console.WriteLine("Stack Elements:");
+        foreach (int item in stack)
+        {
+            Console.WriteLine(item);
+        }
+
+        Console.WriteLine("Total Count: " + stack.Count);
+    }
+}
