@@ -1,0 +1,179 @@
+using System;
+using System.Collections.Generic;
+
+namespace GenericsDemo
+{
+    
+    // a) GENERIC CLASS
+    
+    // Think of a generic class as a "box" that can hold *any* type of data.
+    // Instead of writing BoxForInt, BoxForString, etc... we just write GenericBox<T>.
+
+    public class GenericBox<T>
+    {
+        private T value;
+
+        public GenericBox(T initialValue)
+        {
+            value = initialValue;
+        }
+
+        public T GetValue()
+        {
+            return value;
+        }
+
+        public void SetValue(T newValue)
+        {
+            value = newValue;
+        }
+    }
+
+   
+    // b) GENERIC INTERFACE
+   
+    // Interfaces can also be generic. 
+    // Example: IEnumerable<T> is everywhere in .NET.
+    // Let's make our own little storage interface.
+    public interface IStorage<T>
+    {
+        void Store(T item);
+        T Retrieve();
+    }
+
+    // Here’s a simple class that implements our generic interface.
+    public class Storage<T> : IStorage<T>
+    {
+        private T data;
+
+        public void Store(T item)
+        {
+            data = item;
+        }
+
+        public T Retrieve()
+        {
+            return data;
+        }
+    }
+
+    
+    // c) GENERIC METHOD
+    // Methods can also use <T> even if the class itself isn't generic.
+    // Example: Swap two variables without caring about what type they are.
+    public class Utilities
+    {
+        public static void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+
+        // Another one: find max of two values.
+        // We say "where T : IComparable<T>" so that T is guaranteed to be comparable.
+        public static T GetMax<T>(T a, T b) where T : IComparable<T>
+        {
+            return a.CompareTo(b) >= 0 ? a : b;
+        }
+    }
+
+   
+    // d) CODE BLOAT
+   
+    // In C++ templates, every new type creates a whole new copy of the code = bloat.
+    // In C#, the CLR is smarter:
+    // - Reference types (like string, object, custom classes) share one version of the code.
+    // - Value types (like int, double) do get their own version, but that’s necessary for performance.
+    public class CodeBloatDemo
+    {
+        public void Demo()
+        {
+            List<int> intList = new List<int>();
+            List<string> stringList = new List<string>();
+
+            // Behind the scenes: CLR optimizes so we don’t actually get a giant mess of duplicated code.
+        }
+    }
+
+    
+    // e) CO-VARIANCE & CONTRA-VARIANCE
+    
+    // Variance is about making generics play nice with inheritance.
+
+    public class Animal { }
+    public class Dog : Animal { }
+
+    // CO-VARIANCE (out keyword):
+    // Lets us use "more derived -> less derived".
+    // Example: ICovariant<Dog> can be assigned to ICovariant<Animal>.
+    public interface ICovariant<out T>
+    {
+        T GetItem();
+    }
+
+    public class CovariantExample : ICovariant<Dog>
+    {
+        public Dog GetItem() => new Dog();
+    }
+
+    // CONTRA-VARIANCE (in keyword):
+    // Lets us go "less derived -> more derived".
+    // Example: IContravariant<Animal> can be assigned to IContravariant<Dog>.
+    public interface IContravariant<in T>
+    {
+        void SetItem(T item);
+    }
+
+    public class ContravariantExample : IContravariant<Animal>
+    {
+        public void SetItem(Animal item)
+        {
+            Console.WriteLine("Stored an animal (could be any subclass too).");
+        }
+    }
+
+  
+    // MAIN DEMO
+  
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // ----- GENERIC CLASS -----
+            var intBox = new GenericBox<int>(10);
+            Console.WriteLine("Box has: " + intBox.GetValue());
+            intBox.SetValue(20);
+            Console.WriteLine("Box now has: " + intBox.GetValue());
+
+            // ----- GENERIC INTERFACE -----
+            IStorage<string> stringStorage = new Storage<string>();
+            stringStorage.Store("Hello from generics!");
+            Console.WriteLine("Storage retrieved: " + stringStorage.Retrieve());
+
+            // ----- GENERIC METHOD -----
+            int a = 5, b = 10;
+            Console.WriteLine($"Before swap: a={a}, b={b}");
+            Utilities.Swap(ref a, ref b);
+            Console.WriteLine($"After swap: a={a}, b={b}");
+
+            Console.WriteLine("Max of 3 and 7 = " + Utilities.GetMax(3, 7));
+
+            // ----- CODE BLOAT -----
+            var cbDemo = new CodeBloatDemo();
+            cbDemo.Demo();
+            Console.WriteLine("Code bloat demo complete.");
+
+            // ----- COVARIANCE -----
+            ICovariant<Dog> dogCovariant = new CovariantExample();
+            ICovariant<Animal> animalCovariant = dogCovariant; // works because of "out"
+            Console.WriteLine("Covariance worked: Dog -> Animal");
+
+            // ----- CONTRAVARIANCE -----
+            IContravariant<Animal> animalContravariant = new ContravariantExample();
+            IContravariant<Dog> dogContravariant = animalContravariant; // works because of "in"
+            dogContravariant.SetItem(new Dog());
+            Console.WriteLine("Contravariance worked: Animal -> Dog");
+        }
+    }
+}
