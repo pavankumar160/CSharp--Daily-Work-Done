@@ -1,0 +1,145 @@
+-->Static Members:
+
+using System;
+
+class Counter
+{
+    // Static field shared by ALL instances of Counter
+    private static int count = 0;
+
+    // Constructor increments count every time a new object is created
+    public Counter()
+    {
+        count++;
+    }
+
+    // Static method belongs to the class, not an object
+    public static void ShowCount()
+    {
+        Console.WriteLine($"Total objects created: {count}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        var c1 = new Counter();
+        var c2 = new Counter();
+        var c3 = new Counter();
+
+        // Call static method (note: we call on class, not object)
+        Counter.ShowCount(); // Output: Total objects created: 3
+    }
+}
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-->Constraints:
+
+
+
+using System;
+
+// Generic class with constraints
+class DataStore<T> where T : class // T must be a reference type
+{
+    public T Data { get; set; }
+
+    public void Print()
+    {
+        Console.WriteLine(Data?.ToString());
+    }
+}
+
+// Generic method with constraint
+class Factory
+{
+    public static T CreateInstance<T>() where T : new() // T must have a parameterless constructor
+    {
+        return new T();
+    }
+}
+
+class Person
+{
+    public string Name { get; set; } = "John Doe";
+    public override string ToString() => $"Person: {Name}";
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Using class constraint
+        var store = new DataStore<Person>();
+        store.Data = new Person { Name = "Alice" };
+        store.Print(); // Person: Alice
+
+        // Using new() constraint
+        var person = Factory.CreateInstance<Person>();
+        Console.WriteLine(person); // Person: John Doe
+    }
+}
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-->Covariance & Contravariance:
+
+
+
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    // Covariance: allows using a more derived type (string) as a less derived type (object)
+    static void ShowCovariance()
+    {
+        IEnumerable<string> strings = new List<string>() { "hello", "world" };
+
+        // Because of covariance, we can assign IEnumerable<string> to IEnumerable<object>
+        IEnumerable<object> objects = strings;
+
+        foreach (var item in objects)
+        {
+            Console.WriteLine(item); // Prints "hello", "world"
+        }
+    }
+
+    // Contravariance: allows using a less derived type (object) as a more derived type (string)
+    static void ShowContravariance()
+    {
+        // Action<object> can take any object
+        Action<object> actObject = obj => Console.WriteLine(obj);
+
+        // Because of contravariance, we can assign Action<object> to Action<string>
+        Action<string> actString = actObject;
+
+        actString("Contravariance works!");
+    }
+
+    static void Main()
+    {
+        ShowCovariance();
+        ShowContravariance();
+    }
+}
+
