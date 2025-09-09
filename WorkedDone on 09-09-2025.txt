@@ -1,3 +1,5 @@
+//Topic : Delegates
+
 /Action Delegate
 
 using System;
@@ -19,7 +21,7 @@ class Program
 }
 
 
-//Fun Delegate
+//Function Delegate
 
 using System;
 
@@ -86,3 +88,4 @@ class Program
         // Bye Pavan
     }
 }
+
