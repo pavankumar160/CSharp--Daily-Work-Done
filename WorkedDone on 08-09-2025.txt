@@ -1,0 +1,51 @@
+//String Class
+//StringBuilder Class
+
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        // STRING (Immutable)
+        Console.WriteLine("=== String Example ===");
+        string str = "Hello";
+        Console.WriteLine("Original string: " + str);
+
+        str += " World"; // Creates a new string in memory
+        Console.WriteLine("After concatenation: " + str);
+
+        // Demonstrate immutability
+        string str2 = str.Replace("World", "C#");
+        Console.WriteLine("After replace (new object created): " + str2);
+        Console.WriteLine("Original string is still: " + str);
+
+        // STRINGBUILDER (Mutable)
+        Console.WriteLine("\n=== StringBuilder Example ===");
+        StringBuilder sb = new StringBuilder("Hello");
+        Console.WriteLine("Original StringBuilder: " + sb);
+
+        sb.Append(" World"); // Modifies in the same object
+        Console.WriteLine("After append: " + sb);
+
+        sb.Replace("World", "C#"); // Changes the existing object
+        Console.WriteLine("After replace: " + sb);
+
+        // Showing performance usage
+        Console.WriteLine("\n=== Performance Example ===");
+        string s = "";
+        for (int i = 0; i < 5; i++)  // Use small loop for demo
+        {
+            s += i + " "; // Creates new string every time
+        }
+        Console.WriteLine("Using string: " + s);
+
+        StringBuilder sbPerf = new StringBuilder();
+        for (int i = 0; i < 5; i++)
+        {
+            sbPerf.Append(i).Append(" ");
+        }
+        Console.WriteLine("Using StringBuilder: " + sbPerf);
+    }
+}
