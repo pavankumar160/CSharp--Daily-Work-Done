@@ -1,0 +1,88 @@
+/Action Delegate
+
+using System;
+
+class Program
+{
+    static void PrintName(string name)
+    {
+        Console.WriteLine("Hello " + name);
+    }
+
+    static void Main()
+    {
+        // Action delegate with one parameter
+        Action<string> greet = PrintName;
+
+        greet("Pavan"); // Output: Hello Pavan
+    }
+}
+
+
+//Fun Delegate
+
+using System;
+
+class Program
+{
+    static int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    static void Main()
+    {
+        // Func delegate with two inputs and one output
+        Func<int, int, int> sum = Add;
+
+        Console.WriteLine(sum(10, 20)); // Output: 30
+    }
+}
+
+
+
+//Predicate Delegate
+
+
+using System;
+
+class Program
+{
+    static bool IsEven(int number)
+    {
+        return number % 2 == 0;
+    }
+
+    static void Main()
+    {
+        Predicate<int> checkEven = IsEven;
+
+        Console.WriteLine(checkEven(10)); // True
+        Console.WriteLine(checkEven(7));  // False
+    }
+}
+
+
+//Multicast Delegate
+
+
+using System;
+
+delegate void Notify(string message);
+
+class Program
+{
+    static void SayHello(string name) => Console.WriteLine("Hello " + name);
+    static void SayBye(string name) => Console.WriteLine("Bye " + name);
+
+    static void Main()
+    {
+        Notify del = SayHello;
+        del += SayBye;   // Multicast delegate
+
+        del("Pavan");
+        // Output:
+        // Hello Pavan
+        // Bye Pavan
+    }
+}
