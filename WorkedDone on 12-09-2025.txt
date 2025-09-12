@@ -1,0 +1,217 @@
+//using System;
+//using System.Data;
+//using System.Data.SqlClient;
+
+
+//class Program
+//{
+//    static void Main()
+//    {
+//        // 1. Connection String (modify according to your SQL Server setup)
+//        string connectionString = "Server=192.168.0.30;Database=294;User Id=User5;Password=CDev005#8;";
+
+//        // 2. Create a connection
+//        using (SqlConnection conn = new SqlConnection(connectionString))
+//        {
+//            conn.Open();
+//            Console.WriteLine("Connection Established!");
+
+//            // 3. Create a command
+//            string query = "SELECT TOP 5 * FROM Employee"; // Example table
+//            SqlCommand cmd = new SqlCommand(query, conn);
+
+//            // 4. Execute with DataReader
+//            SqlDataReader reader = cmd.ExecuteReader();
+//            while (reader.Read())
+//            {
+//                Console.WriteLine(reader[0] + " | " + reader[1]); // print first 2 columns
+//            }
+//            reader.Close();
+
+//            //// 5. Using DataAdapter + DataSet
+//            //SqlDataAdapter adapter = new SqlDataAdapter("SELECT * FROM Employee", conn);
+//            //DataSet ds = new DataSet();
+//            //adapter.Fill(ds, "Employees");
+
+//            //DataTable dt = ds.Tables["Employees"];
+//            //foreach (DataRow row in dt.Rows)
+//            //{
+//            //    Console.WriteLine(row["EmployeeID"] + " - " + row["Name"]);
+//            //}
+//        }
+//    }
+//}
+
+
+//using System;
+//using System.Data.SqlClient;
+
+//class Program
+//{
+//    static void Main()
+//    {
+//        string connStr = "Server=192.168.0.30;Database=294;User Id=User5;Password=CDev005#8;";
+
+//        using (SqlConnection conn = new SqlConnection(connStr))
+//        {
+//            conn.Open();
+
+//            // 1. CREATE (Insert)
+//            string insertQuery = "INSERT INTO Employee (Name, Age) VALUES ('Pavan', 22)";
+//            SqlCommand insertCmd = new SqlCommand(insertQuery, conn);
+//            insertCmd.ExecuteNonQuery();
+//            Console.WriteLine("Inserted record");
+
+//            // 2. READ (Select)
+//            string selectQuery = "SELECT EmployeeID, Name, Age FROM Employee";
+//            SqlCommand selectCmd = new SqlCommand(selectQuery, conn);
+//            SqlDataReader reader = selectCmd.ExecuteReader();
+//            Console.WriteLine("\nEmployee Table:");
+//            while (reader.Read())
+//            {
+//                Console.WriteLine($"{reader["EmployeeID"]} | {reader["Name"]} | {reader["Age"]}");
+//            }
+//            reader.Close();
+
+//            // 3. UPDATE
+//            string updateQuery = "UPDATE Employee SET Age = 25 WHERE Name = 'Pavan'";
+//            SqlCommand updateCmd = new SqlCommand(updateQuery, conn);
+//            updateCmd.ExecuteNonQuery();
+//            Console.WriteLine("\nUpdated record");
+
+//            // 4. DELETE
+//            string deleteQuery = "DELETE FROM Employee WHERE Name = 'Pavan'";
+//            SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn);
+//            deleteCmd.ExecuteNonQuery();
+//            Console.WriteLine("\nDeleted record");
+//        }
+//    }
+//}
+
+
+
+using System.Data.SqlClient;
+
+class Program
+{
+  
+    static void Main()
+    {
+        string connStr = "Server=192.168.0.30;Database=294;User Id=User5;Password=CDev005#8;";
+
+        using (SqlConnection conn = new SqlConnection(connStr))
+        {
+            conn.Open();
+
+            int choice;
+            do
+            {
+                Console.WriteLine("\n===== Employee CRUD Menu =====");
+                Console.WriteLine("1. Insert");
+                Console.WriteLine("2. Read");
+                Console.WriteLine("3. Update");
+                Console.WriteLine("4. Delete");
+                Console.WriteLine("0. Exit");
+                Console.Write("Enter choice: ");
+
+                // Safe parse input
+                if (!int.TryParse(Console.ReadLine(), out choice))
+                {
+                    Console.WriteLine("Invalid input, try again.");
+                    continue;
+                }
+
+                switch (choice)
+                {
+                    case 1: // CREATE
+                        Console.Write("Enter Name: ");
+                        string name = Console.ReadLine();
+
+                        Console.Write("Enter Age: ");
+                        if (!int.TryParse(Console.ReadLine(), out int age))
+                        {
+                            Console.WriteLine("Invalid age.");
+                            break;
+                        }
+
+                        string insertQuery = "INSERT INTO Employee (Name, Age) VALUES (@name, @age)";
+                        using (SqlCommand insertCmd = new SqlCommand(insertQuery, conn))
+                        {
+                            insertCmd.Parameters.AddWithValue("@name", name);
+                            insertCmd.Parameters.AddWithValue("@age", age);
+                            insertCmd.ExecuteNonQuery();
+                        }
+                        Console.WriteLine("Record Inserted");
+                        break;
+
+                    case 2: // READ
+                        string selectQuery = "SELECT EmployeeID, Name, Age FROM Employee";
+                        using (SqlCommand selectCmd = new SqlCommand(selectQuery, conn))
+                        using (SqlDataReader reader = selectCmd.ExecuteReader())
+                        {
+                            Console.WriteLine("\nEmployee Table:");
+                            while (reader.Read())
+                            {
+                                Console.WriteLine($"{reader["EmployeeID"]} | {reader["Name"]} | {reader["Age"]}");
+                            }
+                        }
+                        break;
+
+                    case 3: // UPDATE
+                        Console.Write("Enter EmployeeID to Update: ");
+                        if (!int.TryParse(Console.ReadLine(), out int updateId))
+                        {
+                            Console.WriteLine("Invalid ID.");
+                            break;
+                        }
+
+                        Console.Write("Enter New Age: ");
+                        if (!int.TryParse(Console.ReadLine(), out int newAge))
+                        {
+                            Console.WriteLine("Invalid age.");
+                            break;
+                        }
+
+                        string updateQuery = "UPDATE Employee SET Age = @age WHERE EmployeeID = @id";
+                        using (SqlCommand updateCmd = new SqlCommand(updateQuery, conn))
+                        {
+                            updateCmd.Parameters.AddWithValue("@age", newAge);
+                            updateCmd.Parameters.AddWithValue("@id", updateId);
+                            int rows = updateCmd.ExecuteNonQuery();
+                            Console.WriteLine(rows > 0 ? " Record Updated" : " No record found with that ID");
+                        }
+                        break;
+
+                    case 4: // DELETE
+                        Console.Write("Enter EmployeeID to Delete: ");
+                        if (!int.TryParse(Console.ReadLine(), out int deleteId))
+                        {
+                            Console.WriteLine(" Invalid ID.");
+                            break;
+                        }
+
+                        string deleteQuery = "DELETE FROM Employee WHERE EmployeeID = @id";
+                        using (SqlCommand deleteCmd = new SqlCommand(deleteQuery, conn))
+                        {
+                            deleteCmd.Parameters.AddWithValue("@id", deleteId);
+                            int rows = deleteCmd.ExecuteNonQuery();
+                            Console.WriteLine(rows > 0 ? "Record Deleted" : "No record found with that ID");
+                        }
+                        break;
+
+                    case 0:
+                        Console.WriteLine("Exiting program...");
+                        break;
+
+                    default:
+                        Console.WriteLine("Invalid choice, try again.");
+                        break;
+                }
+
+            } while (choice != 0); // keep running until user enters 0
+        }
+    }
+}
+
+
+
